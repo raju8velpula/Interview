@@ -15,8 +15,8 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.printf("Hello and welcome!");
 
-        WebDriver delegate = new ChromeDriver();
-        WebDriver driver = SelfHealingDriver.create(delegate);
+        WebDriver driver = new ChromeDriver();
+        driver = SelfHealingDriver.create(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
